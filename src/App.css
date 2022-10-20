@@ -1,38 +1,77 @@
-.App {
+body{
+  background-color:rgb(36, 71, 71);
+}
+
+/*(bintang) artinya keseluruhan elemen */
+*{
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family:'Twentieth Centuri W01, Futura, Helvetica, Arial, sans-serif';
+}
+
+/* untuk merubah element yang di kasih className eadingSite */
+.headingSite{
+  color: rgb(250, 253, 255); /* untuk merubah warna text*/
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pembuat{
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtittle{
+  /* position: relative;
+  left: 560px; */
+  text-align: center;
+  color:rgb(255, 255, 255);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.garis {
+  /* border-top:5px dotted rgb(36, 71, 71); */
+  border: 2px dashed #000000;
+  color:rgb(36, 71, 71);
 }
 
-.App-link {
-  color: #61dafb;
+/* untuk merubah element yang di kasih className imageProfile */
+.imageProfile {
+  border: 2px dashed #0f0101; 
+    /* 
+      border = untuk membuat border atau frame
+      3px = ketebalan border
+      dashed = jenis bentuk border
+      # = warna border
+    */
+  padding: 4px; /*untuk menambahkan jarak di sisi gambar*/
+  margin: 10px;
+  transition: 2s ease all;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* hover = ketika browser ke bagian image */
+.imageProfile:hover {
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 50px; 
+    /*
+      border-radius = untuk mengedit sudut border agar tidak lancip
+      30px = ukuran dari lengkungan sudut border
+    */
+  animation: animasiImage 3s ease 1 alternate forwards;
+}
+
+@keyframes animasiImage {
+    0% {
+      width: 200px;
+      height: 130px;
+    }
+    50% {
+      width: 350px;
+      height: 200px;
+    }
+    100% {
+      width: 350px;
+      height: 300px;
+    }
+}
+
+.boxPictures {
+  padding: 5px;
+  text-align: center;
 }
